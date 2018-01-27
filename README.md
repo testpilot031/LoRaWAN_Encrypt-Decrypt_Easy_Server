@@ -9,8 +9,10 @@ python-lora is here.
 https://github.com/jieter/python-lora
 
 ## How to make and run Server
-  ` $ cd <your download dir>` 
+  ` $ cd <your download dir>`
+  
   ` $ docker build -t lorawan_enc-dec .` 
+  
   ` $ docker run -d -p 80:80 lorawan_enc-dec` 
 
 ## Usage
