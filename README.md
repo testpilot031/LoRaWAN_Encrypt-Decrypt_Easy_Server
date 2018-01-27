@@ -1,9 +1,12 @@
 # Read Me
-##　abstract
+
+## abstract
 This is LoRaWAN Encrypt Decrypt Easy Server.
 if you want to use, Docker is need.
 I only made a API for the web with some plugins or framework which are already made by another. 
-Its are falcon and python-lora .
+Its are falcon and python-lora.
+python-lora is here.
+https://github.com/jieter/python-lora
 
 ## How to make and run Server
 $ cd <your download dir>
@@ -17,6 +20,4 @@ payload, key, dev_addr => hex
 fCnt => 10　Decimal number
 
 
-
-
-
+This is Easy Server...
