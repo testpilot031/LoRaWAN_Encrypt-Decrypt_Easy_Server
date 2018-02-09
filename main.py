@@ -26,11 +26,10 @@ class DecryptAndEncryptData(object):
                 intDir = 1
             resp.body = json.dumps(loramac_decrypt(payload, fcnt, key, dev_addr, intDir))
         except Exception as e:
-            print '=== error ==='
-            print 'type:' + str(type(e))
-            print 'args:' + str(e.args)
-            print 'message:' + e.message
-            print 'e自身:' + str(e)
+            print ('=== error ===')
+            print ('type:' + str(type(e)))
+            print ('args:' + str(e.args))
+            print ('message:' + e.message)
     def on_post(self, req, resp):
         body = req.stream.read()
         body = body.decode("utf-8")
@@ -42,7 +41,7 @@ class DecryptAndEncryptData(object):
         elif data['direction'] == "DOWN":
             intDir = 1
         resp.body = json.dumps(loramac_decrypt(str(data['payload']), int(data['fcnt'], 10), str(data['key']), str(data['dev_adder']), intDir))
-        
+
 class TypeUtil():
     def ishex(string):
         pattern = '^[0-9A-Fa-f]+$'
@@ -62,12 +61,12 @@ class TypeUtil():
         return bddata
 #class TypeCheck():
 #   def isint(obj):
-        
+
 #   def
-        
-        
-        
-        
+
+
+
+
 application = falcon.API()
 application.add_route("/",DecryptAndEncryptData())
 application.add_route("/decrypt/",DecryptAndEncryptData())
