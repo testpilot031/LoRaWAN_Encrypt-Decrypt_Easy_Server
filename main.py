@@ -59,12 +59,6 @@ class TypeUtil():
         for char in hexdata:
             bddata += format(int(char, 16), '04b')
         return bddata
-#class TypeCheck():
-#   def isint(obj):
-
-#   def
-
-
 
 
 application = falcon.API()
