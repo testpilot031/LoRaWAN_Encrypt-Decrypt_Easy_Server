@@ -26,7 +26,3 @@ RUN chmod 755 /home/ubuntu/script/main.py
 RUN updatedb
 #最後の方http://kimh.github.io/blog/jp/docker/gothas-in-writing-dockerfile-jp/#treat_your_container_like_a_binary_with_cmd
 ENTRYPOINT service ssh start && service apache2 start && tail -f /dev/null
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNDExMjc0N119
--->
