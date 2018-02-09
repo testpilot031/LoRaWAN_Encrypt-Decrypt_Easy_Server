@@ -1,7 +1,7 @@
-#利用するUbuntuのイメージ
+# images
 FROM ubuntu:16.04
 
-# インストールpython3-pip wget lsof apache2 apache2-dev(pip3 install mod_wsgiで必要)
+# python3-pip wget lsof apache2 apache2-dev(for pip3 install mod_wsgi)
 RUN set -x && \
     apt-get update && \
     apt-get install -y vim git sudo openssh-server mlocate lsof python3 python3-pip python-dev python3-dev libffi-dev libssl-dev apache2 apache2-dev && \
@@ -24,5 +24,5 @@ RUN chmod 755 /home/ubuntu/script/app.wsgi
 ADD main.py /home/ubuntu/script/
 RUN chmod 755 /home/ubuntu/script/main.py
 RUN updatedb
-#最後の方http://kimh.github.io/blog/jp/docker/gothas-in-writing-dockerfile-jp/#treat_your_container_like_a_binary_with_cmd
+# http://kimh.github.io/blog/jp/docker/gothas-in-writing-dockerfile-jp/#treat_your_container_like_a_binary_with_cmd
 ENTRYPOINT service ssh start && service apache2 start && tail -f /dev/null
